@@ -11,9 +11,7 @@
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="CrossWatch_WatchKit_App" customModuleProvider="target">
                     <items>
                         <label width="136" height="38" alignment="left" text="Workout" textAlignment="center" id="BgP-mw-oRz"/>
-                        <label width="136" height="45" alignment="left" text="Time" textAlignment="center" id="6P2-rt-U2X">
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        </label>
+                        <label width="133" height="37" alignment="left" text="Label" textAlignment="center" id="4ND-PX-2Zs"/>
                         <button width="1" alignment="left" title="Start" id="OPH-kn-RmW">
                             <color key="titleColor" red="0.30576412739999997" green="0.47007715430000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -25,7 +23,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="workoutName" destination="BgP-mw-oRz" id="ObW-re-uuI"/>
-                        <outlet property="workoutTime" destination="6P2-rt-U2X" id="3Jf-f5-n2f"/>
+                        <outlet property="workoutTime" destination="4ND-PX-2Zs" id="n3d-Xp-cy9"/>
                     </connections>
                 </controller>
             </objects>
