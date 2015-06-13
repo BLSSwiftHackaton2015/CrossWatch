@@ -1,0 +1,6 @@
+framework module MMWormhole {
+  umbrella header "Pods-CrossWatch-MMWormhole-umbrella.h"
+
+  export *
+  module * { export * }
+}

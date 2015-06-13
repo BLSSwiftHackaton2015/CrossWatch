@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		05361AAA1B2C260D00A4EBD0 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05361AA91B2C260D00A4EBD0 /* Workout.swift */; };
 		05B3C2411B2C486D00EAE274 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05361AA91B2C260D00A4EBD0 /* Workout.swift */; };
+		452650EE130C4A0D9A62FA8A /* Pods_CrossWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB89C5506194ADF8A00677A /* Pods_CrossWatch.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A4177CE21B2C3C5900A65C20 /* AddWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4177CE11B2C3C5900A65C20 /* AddWorkoutViewController.swift */; };
 		A4BDA15C1B2C20DE00F48606 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BDA15B1B2C20DE00F48606 /* AppDelegate.swift */; };
 		A4BDA15F1B2C20DE00F48606 /* CrossWatch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4BDA15D1B2C20DE00F48606 /* CrossWatch.xcdatamodeld */; };
@@ -69,6 +70,8 @@
 /* Begin PBXFileReference section */
 		05361AA81B2C260D00A4EBD0 /* CrossWatch WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CrossWatch WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
 		05361AA91B2C260D00A4EBD0 /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		48449ADF710D13EDDC46E768 /* Pods-CrossWatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossWatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrossWatch/Pods-CrossWatch.debug.xcconfig"; sourceTree = "<group>"; };
+		74006EF4E0262EB01B198FD1 /* Pods-CrossWatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossWatch.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrossWatch/Pods-CrossWatch.release.xcconfig"; sourceTree = "<group>"; };
 		A4177CE11B2C3C5900A65C20 /* AddWorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddWorkoutViewController.swift; sourceTree = "<group>"; };
 		A4BDA1561B2C20DE00F48606 /* CrossWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4BDA15A1B2C20DE00F48606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,6 +96,7 @@
 		A4BDA1A71B2C25FE00F48606 /* WorkoutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewController.swift; sourceTree = "<group>"; };
 		A4BDA1A91B2C276D00F48606 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		A4BDA1AB1B2C2A5300F48606 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
+		FCB89C5506194ADF8A00677A /* Pods_CrossWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CrossWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				452650EE130C4A0D9A62FA8A /* Pods_CrossWatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +125,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		112F05B99D9A82C00915DB2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCB89C5506194ADF8A00677A /* Pods_CrossWatch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8858BFC2AA4C544626C60299 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				48449ADF710D13EDDC46E768 /* Pods-CrossWatch.debug.xcconfig */,
+				74006EF4E0262EB01B198FD1 /* Pods-CrossWatch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A4BDA14D1B2C20DE00F48606 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +150,8 @@
 				A4BDA1831B2C241500F48606 /* CrossWatch WatchKit Extension */,
 				A4BDA1951B2C241500F48606 /* CrossWatch WatchKit App */,
 				A4BDA1571B2C20DE00F48606 /* Products */,
+				8858BFC2AA4C544626C60299 /* Pods */,
+				112F05B99D9A82C00915DB2A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -231,10 +255,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4BDA1781B2C20DE00F48606 /* Build configuration list for PBXNativeTarget "CrossWatch" */;
 			buildPhases = (
+				D45793842A53B932F835BBB6 /* Check Pods Manifest.lock */,
 				A4BDA1521B2C20DE00F48606 /* Sources */,
 				A4BDA1531B2C20DE00F48606 /* Frameworks */,
 				A4BDA1541B2C20DE00F48606 /* Resources */,
 				A4BDA1A61B2C241500F48606 /* Embed App Extensions */,
+				BA8D04EF1340283ED7BC1D89 /* Embed Pods Frameworks */,
+				3B6C06CF9B402E8624618853 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -380,6 +407,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B6C06CF9B402E8624618853 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CrossWatch/Pods-CrossWatch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA8D04EF1340283ED7BC1D89 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CrossWatch/Pods-CrossWatch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D45793842A53B932F835BBB6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A4BDA1521B2C20DE00F48606 /* Sources */ = {
@@ -545,6 +620,7 @@
 		};
 		A4BDA1791B2C20DE00F48606 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48449ADF710D13EDDC46E768 /* Pods-CrossWatch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CrossWatch/Info.plist;
@@ -555,6 +631,7 @@
 		};
 		A4BDA17A1B2C20DE00F48606 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74006EF4E0262EB01B198FD1 /* Pods-CrossWatch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CrossWatch/Info.plist;
