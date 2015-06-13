@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import AVFoundation
 
 
 @UIApplicationMain
@@ -129,7 +130,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let infoDictionary = userInfo as? [String: String]
         {
             if (infoDictionary["play"] == "sound") {
-            
+                var hornSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("horn", ofType: "wav"))
+                var audioPlayer = AVAudioPlayer()
+                audioPlayer = AVAudioPlayer(contentsOfURL: hornSound, error: nil)
+                audioPlayer.prepareToPlay()
+                audioPlayer.play()
             }
             let responseDictionary = ["name" : name,
                 "time": time]
