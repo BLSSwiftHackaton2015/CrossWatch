@@ -9,18 +9,30 @@
 import WatchKit
 import Foundation
 
-
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet weak var workoutTime: WKInterfaceLabel!
+    @IBOutlet weak var workoutName: WKInterfaceLabel!
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        self.workoutName.setTextColor(UIColor.redColor())
+        self.workoutTime.setTextColor(UIColor.greenColor())
+
+
         
-        // Configure interface objects here.
+        if let workouts: [Workout] = NSUserDefaults.standardUserDefaults().valueForKey("WorkoutArray") as?[Workout] {
+            self.workoutName.setText(workouts.first?.name)
+            self.workoutTime.setText(String(stringInterpolationSegment: workouts.first?.time))
+        }
     }
 
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        if let workouts: [Workout] = NSUserDefaults.standardUserDefaults().valueForKey("WorkoutArray") as?[Workout] {
+            self.workoutName.setText(workouts.first?.name)
+            self.workoutTime.setText(String(stringInterpolationSegment: workouts.first?.time))
+        }
     }
 
     override func didDeactivate() {

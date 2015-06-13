@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		05361AAA1B2C260D00A4EBD0 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05361AA91B2C260D00A4EBD0 /* Workout.swift */; };
+		05B3C2411B2C486D00EAE274 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05361AA91B2C260D00A4EBD0 /* Workout.swift */; };
 		A4177CE21B2C3C5900A65C20 /* AddWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4177CE11B2C3C5900A65C20 /* AddWorkoutViewController.swift */; };
 		A4BDA15C1B2C20DE00F48606 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BDA15B1B2C20DE00F48606 /* AppDelegate.swift */; };
 		A4BDA15F1B2C20DE00F48606 /* CrossWatch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4BDA15D1B2C20DE00F48606 /* CrossWatch.xcdatamodeld */; };
@@ -17,8 +18,6 @@
 		A4BDA1691B2C20DE00F48606 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4BDA1671B2C20DE00F48606 /* LaunchScreen.xib */; };
 		A4BDA1751B2C20DE00F48606 /* CrossWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BDA1741B2C20DE00F48606 /* CrossWatchTests.swift */; };
 		A4BDA1881B2C241500F48606 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BDA1871B2C241500F48606 /* InterfaceController.swift */; };
-		A4BDA18A1B2C241500F48606 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BDA1891B2C241500F48606 /* NotificationController.swift */; };
-		A4BDA18C1B2C241500F48606 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BDA18B1B2C241500F48606 /* GlanceController.swift */; };
 		A4BDA18E1B2C241500F48606 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4BDA18D1B2C241500F48606 /* Images.xcassets */; };
 		A4BDA1921B2C241500F48606 /* CrossWatch WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = A4BDA1911B2C241500F48606 /* CrossWatch WatchKit App.app */; };
 		A4BDA19A1B2C241500F48606 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4BDA1981B2C241500F48606 /* Interface.storyboard */; };
@@ -86,8 +85,6 @@
 		A4BDA1851B2C241500F48606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4BDA1861B2C241500F48606 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		A4BDA1871B2C241500F48606 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		A4BDA1891B2C241500F48606 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		A4BDA18B1B2C241500F48606 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
 		A4BDA18D1B2C241500F48606 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A4BDA1911B2C241500F48606 /* CrossWatch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CrossWatch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4BDA1971B2C241500F48606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -194,8 +191,6 @@
 			isa = PBXGroup;
 			children = (
 				A4BDA1871B2C241500F48606 /* InterfaceController.swift */,
-				A4BDA1891B2C241500F48606 /* NotificationController.swift */,
-				A4BDA18B1B2C241500F48606 /* GlanceController.swift */,
 				A4BDA18D1B2C241500F48606 /* Images.xcassets */,
 				A4BDA1841B2C241500F48606 /* Supporting Files */,
 			);
@@ -414,9 +409,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4BDA18A1B2C241500F48606 /* NotificationController.swift in Sources */,
 				A4BDA1881B2C241500F48606 /* InterfaceController.swift in Sources */,
-				A4BDA18C1B2C241500F48606 /* GlanceController.swift in Sources */,
+				05B3C2411B2C486D00EAE274 /* Workout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
