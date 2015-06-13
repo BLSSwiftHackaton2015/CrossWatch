@@ -16,6 +16,7 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet weak var workoutTime: WKInterfaceLabel!
 
     let getDictForInfo = ["give" : "info"]
+    let playSound = ["play" : "sound"]
     var timer: NSTimer?
     var response: Workout?
     
@@ -71,6 +72,8 @@ class InterfaceController: WKInterfaceController {
         if let time = self.response?.time {
             if (time == 0) {
                 openParentAppForInfo(getDictForInfo)
+            } else if (time == 3) {
+                openParentAppForInfo(playSound)
             }
         }
         self.updateView()
