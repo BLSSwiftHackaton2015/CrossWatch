@@ -35,12 +35,12 @@ class WorkoutTableViewController: UITableViewController {
         }
     }
     func checkFirstRow() {
-        self.tableView.dequeueReusableCellWithIdentifier("workoutCell", forIndexPath: <#NSIndexPath#>)
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+
         let cell = tableView.dequeueReusableCellWithIdentifier("WorkoutCell", forIndexPath: indexPath) as! WorkoutTableViewCell
-        
+       
         if let work: Workout = workoutArray?.objectAtIndex(indexPath.row) as? Workout {
             cell.nameWorkout.text = work.name
             cell.timeWorkout.text = String(stringInterpolationSegment: work.time)
