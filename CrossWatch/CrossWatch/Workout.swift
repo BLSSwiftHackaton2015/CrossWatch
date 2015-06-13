@@ -12,10 +12,17 @@ class Workout: NSObject{
     let name: String
     var time: NSTimeInterval
     var timer: NSTimer?
+//    var type: TypeOfWorkout
+//    
+//    enum TypeOfWorkout {
+//        case workout
+//        case rest
+//    }
     
     init(name: String, time: NSTimeInterval){
         self.name = name
         self.time = time
+//        self.type = TypeOfWorkout.workout
     }
     
     func startTimer(){
@@ -30,4 +37,8 @@ class Workout: NSObject{
             self.timer?.invalidate()
         }
     }
+    
+//    func setWorkoutType(type: TypeOfWorkout){
+//        self.type = type
+//    }
 }

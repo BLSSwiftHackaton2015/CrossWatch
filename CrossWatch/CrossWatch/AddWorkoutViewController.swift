@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddWorkoutViewController: UIViewController {
+class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var workoutLabel: UILabel!
@@ -22,8 +22,16 @@ class AddWorkoutViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        nameField.delegate = self
+        workoutField.delegate = self
+        restField.delegate = self
+        intervalsField.delegate = self
+        
+        workoutField.keyboardType = UIKeyboardType.NumbersAndPunctuation
+        restField.keyboardType = UIKeyboardType.DecimalPad
+        intervalsField.keyboardType = UIKeyboardType.DecimalPad
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,7 +45,21 @@ class AddWorkoutViewController: UIViewController {
     }
 
     @IBAction func addWorkouts(sender: AnyObject) {
+        
+    }
     
+    func textFieldDidBeginEditing(textField: UITextField) {
+        
+    }
+    
+    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
+        return true
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
     }
     
     /*
