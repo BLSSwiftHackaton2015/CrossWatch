@@ -63,7 +63,7 @@ class WorkoutTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("WorkoutCell", forIndexPath: indexPath) as! WorkoutTableViewCell
        
             cell.nameWorkout.text = workoutArray[indexPath.row].name
-            cell.timeWorkout.text = String(stringInterpolationSegment: workoutArray[indexPath.row].time)
+            cell.timeWorkout.text = String(stringInterpolationSegment: Int(workoutArray[indexPath.row].time))
     
         return cell
     }
