@@ -11,6 +11,7 @@
 		05B3C2411B2C486D00EAE274 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05361AA91B2C260D00A4EBD0 /* Workout.swift */; };
 		452650EE130C4A0D9A62FA8A /* Pods_CrossWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB89C5506194ADF8A00677A /* Pods_CrossWatch.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A4177CE21B2C3C5900A65C20 /* AddWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4177CE11B2C3C5900A65C20 /* AddWorkoutViewController.swift */; };
+		A4177CE51B2C72F300A65C20 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4177CE41B2C72F300A65C20 /* UserDefaults.swift */; };
 		A4BDA15C1B2C20DE00F48606 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BDA15B1B2C20DE00F48606 /* AppDelegate.swift */; };
 		A4BDA15F1B2C20DE00F48606 /* CrossWatch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4BDA15D1B2C20DE00F48606 /* CrossWatch.xcdatamodeld */; };
 		A4BDA1611B2C20DE00F48606 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BDA1601B2C20DE00F48606 /* ViewController.swift */; };
@@ -73,6 +74,7 @@
 		48449ADF710D13EDDC46E768 /* Pods-CrossWatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossWatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrossWatch/Pods-CrossWatch.debug.xcconfig"; sourceTree = "<group>"; };
 		74006EF4E0262EB01B198FD1 /* Pods-CrossWatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossWatch.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrossWatch/Pods-CrossWatch.release.xcconfig"; sourceTree = "<group>"; };
 		A4177CE11B2C3C5900A65C20 /* AddWorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddWorkoutViewController.swift; sourceTree = "<group>"; };
+		A4177CE41B2C72F300A65C20 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		A4BDA1561B2C20DE00F48606 /* CrossWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4BDA15A1B2C20DE00F48606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4BDA15B1B2C20DE00F48606 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				A4BDA1591B2C20DE00F48606 /* Supporting Files */,
 				05361AA81B2C260D00A4EBD0 /* CrossWatch WatchKit App-Bridging-Header.h */,
 				A4177CE11B2C3C5900A65C20 /* AddWorkoutViewController.swift */,
+				A4177CE41B2C72F300A65C20 /* UserDefaults.swift */,
 			);
 			path = CrossWatch;
 			sourceTree = "<group>";
@@ -466,6 +469,7 @@
 				A4BDA1AA1B2C276D00F48606 /* NavigationController.swift in Sources */,
 				A4BDA1A81B2C25FE00F48606 /* WorkoutTableViewController.swift in Sources */,
 				A4177CE21B2C3C5900A65C20 /* AddWorkoutViewController.swift in Sources */,
+				A4177CE51B2C72F300A65C20 /* UserDefaults.swift in Sources */,
 				A4BDA15C1B2C20DE00F48606 /* AppDelegate.swift in Sources */,
 				A4BDA1AC1B2C2A5300F48606 /* WorkoutTableViewCell.swift in Sources */,
 				05361AAA1B2C260D00A4EBD0 /* Workout.swift in Sources */,
