@@ -16,12 +16,14 @@ class InterfaceController: WKInterfaceController {
     
     let getDictForInfo = ["give" : "info"]
     
+    var response: Workout?
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         self.workoutName.setTextColor(UIColor.redColor())
         self.workoutTime.setTextColor(UIColor.greenColor())
         
-        var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("checkTime"), userInfo: nil, repeats: true)
+        var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("decreaseTime"), userInfo: nil, repeats: true)
     }
     
     
@@ -38,18 +40,36 @@ class InterfaceController: WKInterfaceController {
             print("siedem")
             
             if let castedResponseDictionary = replyDictionary as? [String: String],
-                responseMessage = castedResponseDictionary["message"]
+                responseName = castedResponseDictionary["name"]
             {
-                println(responseMessage)
-                print("osiem")
+                if (responseName != "") {
+
+                    self.response = Workout(name: responseName, time: 10)
+                    self.response?.startTimer()
+                    self.updateView()
+                } else {
+                }
             }
         }
     }
 
-    override func didDeactivate() {
-        super.didDeactivate()
+    @IBAction func buttonTap() {
+        openParentAppForInfo(getDictForInfo)
     }
-
-    func checkTime() {
+    
+    func updateView() {
+        if let workout = self.response {
+            self.workoutName.setText(workout.name)
+            self.workoutTime.setText(String(stringInterpolationSegment: workout.time))
+        }
+    }
+    
+    func decreaseTime() {
+        if let time = self.response?.time {
+            if (time == 0) {
+                openParentAppForInfo(getDictForInfo)
+            }
+        }
+        self.updateView()
     }
 }

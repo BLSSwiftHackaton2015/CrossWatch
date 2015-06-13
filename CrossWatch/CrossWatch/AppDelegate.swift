@@ -108,16 +108,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?, reply: (([NSObject : AnyObject]!) -> Void)!) {
-        print("dziewiec")
-        if let infoDictionary = userInfo as? [String: String],
-            message = infoDictionary["message"]
+
+        var name = ""
+        var time = ""
+        let data = NSUserDefaults.standardUserDefaults().valueForKey("WorkoutArray") as! NSData
+        if let workouts = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? [Workout] {
+            if let work = workouts.first {
+                name = work.name
+                time = String(stringInterpolationSegment: work.time)
+            }
+        } else {
+            NSUserDefaults.standardUserDefaults().setValue([], forKey: "WorkoutArray")
+        }
+        if let infoDictionary = userInfo as? [String: String]
         {
-            let response = "\(message), and the iPhone app has seen it."
-            
-            let responseDictionary = ["message" : response]
-            
+            let responseDictionary = ["name" : name,
+                "time": time]
             reply(responseDictionary)
         }
+        
     }
 
 }

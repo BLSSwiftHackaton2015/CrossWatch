@@ -10,10 +10,17 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="CrossWatch_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label width="136" height="68" alignment="left" text="Workout" textAlignment="center" id="BgP-mw-oRz"/>
-                        <label width="136" height="79" alignment="left" text="Time" textAlignment="center" id="6P2-rt-U2X">
+                        <label width="136" height="38" alignment="left" text="Workout" textAlignment="center" id="BgP-mw-oRz"/>
+                        <label width="136" height="45" alignment="left" text="Time" textAlignment="center" id="6P2-rt-U2X">
                             <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </label>
+                        <button width="1" alignment="left" title="Button" id="OPH-kn-RmW">
+                            <color key="titleColor" red="0.30576412739999997" green="0.47007715430000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="buttonTap" destination="AgC-eL-Hgc" id="uhC-IN-Dbf"/>
+                            </connections>
+                        </button>
                     </items>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>

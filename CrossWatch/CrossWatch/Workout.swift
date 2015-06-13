@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Workout: NSObject{
+class Workout: NSObject, NSCoding{
     let name: String
     var time: NSTimeInterval
     var timer: NSTimer?
@@ -18,6 +18,17 @@ class Workout: NSObject{
 //        case workout
 //        case rest
 //    }
+    
+    required convenience init(coder decoder: NSCoder) {
+        self.init(name: decoder.decodeObjectForKey("name") as! String, time: decoder.decodeObjectForKey("time") as! NSTimeInterval)
+        
+    }
+    
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(name, forKey:"name")
+        aCoder.encodeObject(time, forKey:"time")
+    }
     
     init(name: String, time: NSTimeInterval){
         self.name = name

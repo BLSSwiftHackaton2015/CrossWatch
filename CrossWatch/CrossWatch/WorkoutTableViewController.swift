@@ -34,14 +34,19 @@ class WorkoutTableViewController: UITableViewController {
     func prepareArray() {
         var workout = Workout(name: "a", time: 10)
         workout.startTimer()
+        var workout2 = Workout(name: "b", time: 5)
+        workout2.startTimer()
         workoutArray.append(workout)
-        
+        workoutArray.append(workout2)
+        let data = NSKeyedArchiver.archivedDataWithRootObject(workoutArray)
+        NSUserDefaults.standardUserDefaults().setObject(data, forKey: "WorkoutArray")
     }
 
     func checkFirstRow() {
         if (workoutArray.count > 0) {
             if (workoutArray[0].time == 0) {
                 workoutArray.removeAtIndex(0)
+                NSUserDefaults.standardUserDefaults().setValue(workoutArray, forKey: "WorkoutArray")
             }
         }
         self.tableView.reloadData()
