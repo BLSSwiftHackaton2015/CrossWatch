@@ -22,6 +22,8 @@
 		A4BDA19A1B2C241500F48606 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4BDA1981B2C241500F48606 /* Interface.storyboard */; };
 		A4BDA19C1B2C241500F48606 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4BDA19B1B2C241500F48606 /* Images.xcassets */; };
 		A4BDA19F1B2C241500F48606 /* CrossWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A4BDA1821B2C241500F48606 /* CrossWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A4BDA1A81B2C25FE00F48606 /* WorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BDA1A71B2C25FE00F48606 /* WorkoutTableViewController.swift */; };
+		A4BDA1AA1B2C276D00F48606 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BDA1A91B2C276D00F48606 /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		A4BDA1971B2C241500F48606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4BDA1991B2C241500F48606 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		A4BDA19B1B2C241500F48606 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A4BDA1A71B2C25FE00F48606 /* WorkoutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewController.swift; sourceTree = "<group>"; };
+		A4BDA1A91B2C276D00F48606 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +143,9 @@
 			children = (
 				A4BDA15B1B2C20DE00F48606 /* AppDelegate.swift */,
 				A4BDA1601B2C20DE00F48606 /* ViewController.swift */,
+				A4BDA1A71B2C25FE00F48606 /* WorkoutTableViewController.swift */,
 				A4BDA1621B2C20DE00F48606 /* Main.storyboard */,
+				A4BDA1A91B2C276D00F48606 /* NavigationController.swift */,
 				A4BDA1651B2C20DE00F48606 /* Images.xcassets */,
 				A4BDA1671B2C20DE00F48606 /* LaunchScreen.xib */,
 				A4BDA15D1B2C20DE00F48606 /* CrossWatch.xcdatamodeld */,
@@ -375,6 +381,8 @@
 			files = (
 				A4BDA1611B2C20DE00F48606 /* ViewController.swift in Sources */,
 				A4BDA15F1B2C20DE00F48606 /* CrossWatch.xcdatamodeld in Sources */,
+				A4BDA1AA1B2C276D00F48606 /* NavigationController.swift in Sources */,
+				A4BDA1A81B2C25FE00F48606 /* WorkoutTableViewController.swift in Sources */,
 				A4BDA15C1B2C20DE00F48606 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
