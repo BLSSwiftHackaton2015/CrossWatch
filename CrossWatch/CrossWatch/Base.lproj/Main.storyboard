@@ -56,7 +56,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxl-Ji-vID">
-                                            <rect key="frame" x="0.0" y="0.0" width="501" height="88"/>
+                                            <rect key="frame" x="8" y="0.0" width="493" height="88"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -76,7 +76,7 @@
                                         <constraint firstItem="een-JB-h4P" firstAttribute="top" secondItem="UPu-Hk-2SB" secondAttribute="top" id="XP2-0T-P2b"/>
                                         <constraint firstItem="qxl-Ji-vID" firstAttribute="top" secondItem="UPu-Hk-2SB" secondAttribute="top" id="aa5-qS-fog"/>
                                         <constraint firstAttribute="trailing" secondItem="een-JB-h4P" secondAttribute="trailing" id="hv7-qM-2rf"/>
-                                        <constraint firstItem="qxl-Ji-vID" firstAttribute="leading" secondItem="UPu-Hk-2SB" secondAttribute="leading" id="nxB-6l-WqR"/>
+                                        <constraint firstItem="qxl-Ji-vID" firstAttribute="leading" secondItem="UPu-Hk-2SB" secondAttribute="leading" constant="8" id="nxB-6l-WqR"/>
                                         <constraint firstAttribute="bottom" secondItem="een-JB-h4P" secondAttribute="bottom" id="oog-Xy-HiA"/>
                                         <constraint firstItem="een-JB-h4P" firstAttribute="leading" secondItem="qxl-Ji-vID" secondAttribute="trailing" id="u7O-Zk-clP"/>
                                     </constraints>
