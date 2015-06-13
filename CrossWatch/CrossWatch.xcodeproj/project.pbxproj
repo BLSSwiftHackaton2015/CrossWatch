@@ -14,6 +14,14 @@
 		A4BDA1661B2C20DE00F48606 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4BDA1651B2C20DE00F48606 /* Images.xcassets */; };
 		A4BDA1691B2C20DE00F48606 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4BDA1671B2C20DE00F48606 /* LaunchScreen.xib */; };
 		A4BDA1751B2C20DE00F48606 /* CrossWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BDA1741B2C20DE00F48606 /* CrossWatchTests.swift */; };
+		A4BDA1881B2C241500F48606 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BDA1871B2C241500F48606 /* InterfaceController.swift */; };
+		A4BDA18A1B2C241500F48606 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BDA1891B2C241500F48606 /* NotificationController.swift */; };
+		A4BDA18C1B2C241500F48606 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BDA18B1B2C241500F48606 /* GlanceController.swift */; };
+		A4BDA18E1B2C241500F48606 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4BDA18D1B2C241500F48606 /* Images.xcassets */; };
+		A4BDA1921B2C241500F48606 /* CrossWatch WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = A4BDA1911B2C241500F48606 /* CrossWatch WatchKit App.app */; };
+		A4BDA19A1B2C241500F48606 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4BDA1981B2C241500F48606 /* Interface.storyboard */; };
+		A4BDA19C1B2C241500F48606 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4BDA19B1B2C241500F48606 /* Images.xcassets */; };
+		A4BDA19F1B2C241500F48606 /* CrossWatch WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A4BDA1821B2C241500F48606 /* CrossWatch WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +32,35 @@
 			remoteGlobalIDString = A4BDA1551B2C20DE00F48606;
 			remoteInfo = CrossWatch;
 		};
+		A4BDA1931B2C241500F48606 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4BDA14E1B2C20DE00F48606 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4BDA1901B2C241500F48606;
+			remoteInfo = "CrossWatch WatchKit App";
+		};
+		A4BDA19D1B2C241500F48606 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4BDA14E1B2C20DE00F48606 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4BDA1811B2C241500F48606;
+			remoteInfo = "CrossWatch WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A4BDA1A61B2C241500F48606 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A4BDA19F1B2C241500F48606 /* CrossWatch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A4BDA1561B2C20DE00F48606 /* CrossWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +74,17 @@
 		A4BDA16E1B2C20DE00F48606 /* CrossWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrossWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4BDA1731B2C20DE00F48606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4BDA1741B2C20DE00F48606 /* CrossWatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossWatchTests.swift; sourceTree = "<group>"; };
+		A4BDA1821B2C241500F48606 /* CrossWatch WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CrossWatch WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4BDA1851B2C241500F48606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4BDA1861B2C241500F48606 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		A4BDA1871B2C241500F48606 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		A4BDA1891B2C241500F48606 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		A4BDA18B1B2C241500F48606 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		A4BDA18D1B2C241500F48606 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A4BDA1911B2C241500F48606 /* CrossWatch WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CrossWatch WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4BDA1971B2C241500F48606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4BDA1991B2C241500F48606 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		A4BDA19B1B2C241500F48606 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +102,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A4BDA17F1B2C241500F48606 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -63,6 +117,8 @@
 			children = (
 				A4BDA1581B2C20DE00F48606 /* CrossWatch */,
 				A4BDA1711B2C20DE00F48606 /* CrossWatchTests */,
+				A4BDA1831B2C241500F48606 /* CrossWatch WatchKit Extension */,
+				A4BDA1951B2C241500F48606 /* CrossWatch WatchKit App */,
 				A4BDA1571B2C20DE00F48606 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +128,8 @@
 			children = (
 				A4BDA1561B2C20DE00F48606 /* CrossWatch.app */,
 				A4BDA16E1B2C20DE00F48606 /* CrossWatchTests.xctest */,
+				A4BDA1821B2C241500F48606 /* CrossWatch WatchKit Extension.appex */,
+				A4BDA1911B2C241500F48606 /* CrossWatch WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,6 +173,45 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A4BDA1831B2C241500F48606 /* CrossWatch WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A4BDA1871B2C241500F48606 /* InterfaceController.swift */,
+				A4BDA1891B2C241500F48606 /* NotificationController.swift */,
+				A4BDA18B1B2C241500F48606 /* GlanceController.swift */,
+				A4BDA18D1B2C241500F48606 /* Images.xcassets */,
+				A4BDA1841B2C241500F48606 /* Supporting Files */,
+			);
+			path = "CrossWatch WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		A4BDA1841B2C241500F48606 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A4BDA1851B2C241500F48606 /* Info.plist */,
+				A4BDA1861B2C241500F48606 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A4BDA1951B2C241500F48606 /* CrossWatch WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				A4BDA1981B2C241500F48606 /* Interface.storyboard */,
+				A4BDA19B1B2C241500F48606 /* Images.xcassets */,
+				A4BDA1961B2C241500F48606 /* Supporting Files */,
+			);
+			path = "CrossWatch WatchKit App";
+			sourceTree = "<group>";
+		};
+		A4BDA1961B2C241500F48606 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A4BDA1971B2C241500F48606 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,10 +222,12 @@
 				A4BDA1521B2C20DE00F48606 /* Sources */,
 				A4BDA1531B2C20DE00F48606 /* Frameworks */,
 				A4BDA1541B2C20DE00F48606 /* Resources */,
+				A4BDA1A61B2C241500F48606 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A4BDA19E1B2C241500F48606 /* PBXTargetDependency */,
 			);
 			name = CrossWatch;
 			productName = CrossWatch;
@@ -153,6 +252,39 @@
 			productReference = A4BDA16E1B2C20DE00F48606 /* CrossWatchTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		A4BDA1811B2C241500F48606 /* CrossWatch WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4BDA1A31B2C241500F48606 /* Build configuration list for PBXNativeTarget "CrossWatch WatchKit Extension" */;
+			buildPhases = (
+				A4BDA17E1B2C241500F48606 /* Sources */,
+				A4BDA17F1B2C241500F48606 /* Frameworks */,
+				A4BDA1801B2C241500F48606 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4BDA1941B2C241500F48606 /* PBXTargetDependency */,
+			);
+			name = "CrossWatch WatchKit Extension";
+			productName = "CrossWatch WatchKit Extension";
+			productReference = A4BDA1821B2C241500F48606 /* CrossWatch WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		A4BDA1901B2C241500F48606 /* CrossWatch WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4BDA1A01B2C241500F48606 /* Build configuration list for PBXNativeTarget "CrossWatch WatchKit App" */;
+			buildPhases = (
+				A4BDA18F1B2C241500F48606 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CrossWatch WatchKit App";
+			productName = "CrossWatch WatchKit App";
+			productReference = A4BDA1911B2C241500F48606 /* CrossWatch WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -168,6 +300,12 @@
 					A4BDA16D1B2C20DE00F48606 = {
 						CreatedOnToolsVersion = 6.3.2;
 						TestTargetID = A4BDA1551B2C20DE00F48606;
+					};
+					A4BDA1811B2C241500F48606 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					A4BDA1901B2C241500F48606 = {
+						CreatedOnToolsVersion = 6.3.2;
 					};
 				};
 			};
@@ -186,6 +324,8 @@
 			targets = (
 				A4BDA1551B2C20DE00F48606 /* CrossWatch */,
 				A4BDA16D1B2C20DE00F48606 /* CrossWatchTests */,
+				A4BDA1811B2C241500F48606 /* CrossWatch WatchKit Extension */,
+				A4BDA1901B2C241500F48606 /* CrossWatch WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -205,6 +345,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4BDA1801B2C241500F48606 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4BDA18E1B2C241500F48606 /* Images.xcassets in Resources */,
+				A4BDA1921B2C241500F48606 /* CrossWatch WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4BDA18F1B2C241500F48606 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4BDA19A1B2C241500F48606 /* Interface.storyboard in Resources */,
+				A4BDA19C1B2C241500F48606 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +387,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A4BDA17E1B2C241500F48606 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4BDA18A1B2C241500F48606 /* NotificationController.swift in Sources */,
+				A4BDA1881B2C241500F48606 /* InterfaceController.swift in Sources */,
+				A4BDA18C1B2C241500F48606 /* GlanceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -236,6 +404,16 @@
 			isa = PBXTargetDependency;
 			target = A4BDA1551B2C20DE00F48606 /* CrossWatch */;
 			targetProxy = A4BDA16F1B2C20DE00F48606 /* PBXContainerItemProxy */;
+		};
+		A4BDA1941B2C241500F48606 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4BDA1901B2C241500F48606 /* CrossWatch WatchKit App */;
+			targetProxy = A4BDA1931B2C241500F48606 /* PBXContainerItemProxy */;
+		};
+		A4BDA19E1B2C241500F48606 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4BDA1811B2C241500F48606 /* CrossWatch WatchKit Extension */;
+			targetProxy = A4BDA19D1B2C241500F48606 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -254,6 +432,14 @@
 				A4BDA1681B2C20DE00F48606 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		A4BDA1981B2C241500F48606 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4BDA1991B2C241500F48606 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -394,6 +580,62 @@
 			};
 			name = Release;
 		};
+		A4BDA1A11B2C241500F48606 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = CrossWatch_WatchKit_Extension;
+				INFOPLIST_FILE = "CrossWatch WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		A4BDA1A21B2C241500F48606 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = CrossWatch_WatchKit_Extension;
+				INFOPLIST_FILE = "CrossWatch WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		A4BDA1A41B2C241500F48606 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CrossWatch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A4BDA1A51B2C241500F48606 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "CrossWatch WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -419,6 +661,22 @@
 			buildConfigurations = (
 				A4BDA17C1B2C20DE00F48606 /* Debug */,
 				A4BDA17D1B2C20DE00F48606 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A4BDA1A01B2C241500F48606 /* Build configuration list for PBXNativeTarget "CrossWatch WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4BDA1A11B2C241500F48606 /* Debug */,
+				A4BDA1A21B2C241500F48606 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A4BDA1A31B2C241500F48606 /* Build configuration list for PBXNativeTarget "CrossWatch WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4BDA1A41B2C241500F48606 /* Debug */,
+				A4BDA1A51B2C241500F48606 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
