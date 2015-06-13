@@ -12,6 +12,7 @@
 		452650EE130C4A0D9A62FA8A /* Pods_CrossWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB89C5506194ADF8A00677A /* Pods_CrossWatch.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A4177CE21B2C3C5900A65C20 /* AddWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4177CE11B2C3C5900A65C20 /* AddWorkoutViewController.swift */; };
 		A4177CE51B2C72F300A65C20 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4177CE41B2C72F300A65C20 /* UserDefaults.swift */; };
+		A4177CE71B2C837A00A65C20 /* horn.wav in Resources */ = {isa = PBXBuildFile; fileRef = A4177CE61B2C837A00A65C20 /* horn.wav */; };
 		A4BDA15C1B2C20DE00F48606 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BDA15B1B2C20DE00F48606 /* AppDelegate.swift */; };
 		A4BDA15F1B2C20DE00F48606 /* CrossWatch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4BDA15D1B2C20DE00F48606 /* CrossWatch.xcdatamodeld */; };
 		A4BDA1611B2C20DE00F48606 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BDA1601B2C20DE00F48606 /* ViewController.swift */; };
@@ -75,6 +76,7 @@
 		74006EF4E0262EB01B198FD1 /* Pods-CrossWatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrossWatch.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrossWatch/Pods-CrossWatch.release.xcconfig"; sourceTree = "<group>"; };
 		A4177CE11B2C3C5900A65C20 /* AddWorkoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddWorkoutViewController.swift; sourceTree = "<group>"; };
 		A4177CE41B2C72F300A65C20 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		A4177CE61B2C837A00A65C20 /* horn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = horn.wav; sourceTree = "<group>"; };
 		A4BDA1561B2C20DE00F48606 /* CrossWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4BDA15A1B2C20DE00F48606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4BDA15B1B2C20DE00F48606 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 		A4BDA1591B2C20DE00F48606 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A4177CE61B2C837A00A65C20 /* horn.wav */,
 				A4BDA15A1B2C20DE00F48606 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -381,6 +384,7 @@
 				A4BDA1641B2C20DE00F48606 /* Main.storyboard in Resources */,
 				A4BDA1691B2C20DE00F48606 /* LaunchScreen.xib in Resources */,
 				A4BDA1661B2C20DE00F48606 /* Images.xcassets in Resources */,
+				A4177CE71B2C837A00A65C20 /* horn.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
