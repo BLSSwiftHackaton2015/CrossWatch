@@ -106,6 +106,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    func application(application: UIApplication, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?, reply: (([NSObject : AnyObject]!) -> Void)!) {
+        print("dziewiec")
+        if let infoDictionary = userInfo as? [String: String],
+            message = infoDictionary["message"]
+        {
+            let response = "\(message), and the iPhone app has seen it."
+            
+            let responseDictionary = ["message" : response]
+            
+            reply(responseDictionary)
+        }
+    }
 
 }
 

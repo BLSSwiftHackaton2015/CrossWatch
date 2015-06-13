@@ -14,30 +14,42 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet weak var workoutTime: WKInterfaceLabel!
     @IBOutlet weak var workoutName: WKInterfaceLabel!
     
+    let getDictForInfo = ["give" : "info"]
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         self.workoutName.setTextColor(UIColor.redColor())
         self.workoutTime.setTextColor(UIColor.greenColor())
-
-
         
-        if let workouts: [Workout] = NSUserDefaults.standardUserDefaults().valueForKey("WorkoutArray") as?[Workout] {
-            self.workoutName.setText(workouts.first?.name)
-            self.workoutTime.setText(String(stringInterpolationSegment: workouts.first?.time))
-        }
+        var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("checkTime"), userInfo: nil, repeats: true)
     }
+    
+    
 
     override func willActivate() {
         super.willActivate()
-        if let workouts: [Workout] = NSUserDefaults.standardUserDefaults().valueForKey("WorkoutArray") as?[Workout] {
-            self.workoutName.setText(workouts.first?.name)
-            self.workoutTime.setText(String(stringInterpolationSegment: workouts.first?.time))
+        openParentAppForInfo(getDictForInfo)
+    }
+    
+    private func openParentAppForInfo(Dict: [String: String]) {
+        WKInterfaceController.openParentApplication(getDictForInfo) {
+            (replyDictionary, error) -> Void in
+            
+            print("siedem")
+            
+            if let castedResponseDictionary = replyDictionary as? [String: String],
+                responseMessage = castedResponseDictionary["message"]
+            {
+                println(responseMessage)
+                print("osiem")
+            }
         }
     }
 
     override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
 
+    func checkTime() {
+    }
 }
