@@ -8,8 +8,26 @@
 
 import Foundation
 
-struct Workout {
-    internal let name: String
-    internal let time: NSTimeInterval
+class Workout: NSObject{
+    let name: String
+    var time: NSTimeInterval
+    var timer: NSTimer?
     
+    init(name: String, time: NSTimeInterval){
+        self.name = name
+        self.time = time
+    }
+    
+    func startTimer(){
+        self.timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("revokeWorkoutTime"), userInfo: nil, repeats: true)
+    }
+    
+    func revokeWorkoutTime() {
+        if (self.time > 0) {
+            self.time -= NSTimeInterval(1.0)
+        }
+        else{
+            self.timer?.invalidate()
+        }
+    }
 }
