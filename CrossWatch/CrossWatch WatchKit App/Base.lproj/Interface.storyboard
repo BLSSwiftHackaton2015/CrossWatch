@@ -14,7 +14,7 @@
                         <label width="136" height="45" alignment="left" text="Time" textAlignment="center" id="6P2-rt-U2X">
                             <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </label>
-                        <button width="1" alignment="left" title="Button" id="OPH-kn-RmW">
+                        <button width="1" alignment="left" title="Start" id="OPH-kn-RmW">
                             <color key="titleColor" red="0.30576412739999997" green="0.47007715430000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>

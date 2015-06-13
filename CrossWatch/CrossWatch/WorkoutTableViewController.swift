@@ -23,11 +23,6 @@ class WorkoutTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        if let workouts: [Workout] = NSUserDefaults.standardUserDefaults().valueForKey("WorkoutArray") as?[Workout] {
-            self.workoutArray = workouts
-        } else {
-            NSUserDefaults.standardUserDefaults().setValue([], forKey: "WorkoutArray")
-        }
         prepareArray()
     }
     
@@ -35,7 +30,6 @@ class WorkoutTableViewController: UITableViewController {
         var workout = Workout(name: "a", time: 10)
         workout.startTimer()
         var workout2 = Workout(name: "b", time: 5)
-        workout2.startTimer()
         workoutArray.append(workout)
         workoutArray.append(workout2)
         let data = NSKeyedArchiver.archivedDataWithRootObject(workoutArray)
@@ -46,8 +40,12 @@ class WorkoutTableViewController: UITableViewController {
         if (workoutArray.count > 0) {
             if (workoutArray[0].time == 0) {
                 workoutArray.removeAtIndex(0)
-                NSUserDefaults.standardUserDefaults().setValue(workoutArray, forKey: "WorkoutArray")
+                let data = NSKeyedArchiver.archivedDataWithRootObject(workoutArray)
+                NSUserDefaults.standardUserDefaults().setObject(data, forKey: "WorkoutArray")
             }
+        }
+        if let workout = workoutArray.first {
+            workout.startTimer()
         }
         self.tableView.reloadData()
 
@@ -75,10 +73,9 @@ class WorkoutTableViewController: UITableViewController {
     
         return cell
     }
-    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if(indexPath == NSIndexPath(forRow: 0, inSection: 0)) {
-            self.startTimer()
+            
         }
     }
 

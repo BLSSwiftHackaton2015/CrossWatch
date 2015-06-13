@@ -116,6 +116,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if let work = workouts.first {
                 name = work.name
                 time = String(stringInterpolationSegment: work.time)
+                work.startTimer()
+                var tempWorkouts = workouts
+                tempWorkouts.removeAtIndex(0)
+                
+                let data = NSKeyedArchiver.archivedDataWithRootObject(tempWorkouts)
+                NSUserDefaults.standardUserDefaults().setObject(data, forKey: "WorkoutArray")
             }
         } else {
             NSUserDefaults.standardUserDefaults().setValue([], forKey: "WorkoutArray")
@@ -128,6 +134,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
     }
+    
+    
 
 }
 

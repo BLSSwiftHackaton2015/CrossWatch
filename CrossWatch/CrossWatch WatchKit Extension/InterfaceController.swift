@@ -36,9 +36,7 @@ class InterfaceController: WKInterfaceController {
     private func openParentAppForInfo(Dict: [String: String]) {
         WKInterfaceController.openParentApplication(getDictForInfo) {
             (replyDictionary, error) -> Void in
-            
-            print("siedem")
-            
+                        
             if let castedResponseDictionary = replyDictionary as? [String: String],
                 responseName = castedResponseDictionary["name"]
             {
@@ -48,6 +46,8 @@ class InterfaceController: WKInterfaceController {
                     self.response?.startTimer()
                     self.updateView()
                 } else {
+                    self.response = Workout(name: "Finish", time: 0)
+                    self.updateView()
                 }
             }
         }
