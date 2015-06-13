@@ -18,8 +18,6 @@ class WorkoutTableViewController: UITableViewController {
         let addButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: Selector("addWorkout"))
         
         self.navigationItem.setRightBarButtonItem(addButton, animated: false)
-
-        var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("checkFirstRow"), userInfo: nil, repeats: true)
         self.tableView.reloadData()
         
     }

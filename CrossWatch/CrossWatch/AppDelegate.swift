@@ -44,8 +44,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.saveContext()
     }
     
-    application(application: UIApplication, willFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool
-
     // MARK: - Core Data stack
 
     lazy var applicationDocumentsDirectory: NSURL = {
