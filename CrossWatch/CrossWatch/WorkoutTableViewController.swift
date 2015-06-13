@@ -14,7 +14,6 @@ class WorkoutTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("checkFirstRow"), userInfo: nil, repeats: true)
         self.prepareArray()
         self.tableView.reloadData()
         
@@ -46,6 +45,10 @@ class WorkoutTableViewController: UITableViewController {
 
     }
     
+    func startTimer() {
+        var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("checkFirstRow"), userInfo: nil, repeats: true)
+    }
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -63,6 +66,12 @@ class WorkoutTableViewController: UITableViewController {
             cell.timeWorkout.text = String(stringInterpolationSegment: workoutArray[indexPath.row].time)
     
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if(indexPath == NSIndexPath(forRow: 0, inSection: 0)) {
+            self.startTimer()
+        }
     }
 
 }
