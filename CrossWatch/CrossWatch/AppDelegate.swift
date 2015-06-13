@@ -111,8 +111,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         var name = ""
         var time = ""
-        let data = NSUserDefaults.standardUserDefaults().valueForKey("WorkoutArray") as! NSData
-        if let workouts = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? [Workout] {
+        if let workouts = UserDefaults.getWorkouts(){
             if let work = workouts.first {
                 name = work.name
                 time = String(stringInterpolationSegment: work.time)
@@ -120,6 +119,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 var tempWorkouts = workouts
                 tempWorkouts.removeAtIndex(0)
                 
+                UserDefaults
                 let data = NSKeyedArchiver.archivedDataWithRootObject(tempWorkouts)
                 NSUserDefaults.standardUserDefaults().setObject(data, forKey: "WorkoutArray")
             }

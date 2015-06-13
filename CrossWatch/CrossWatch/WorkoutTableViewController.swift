@@ -23,7 +23,11 @@ class WorkoutTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
+        if let workouts = UserDefaults.getWorkouts() {
+            workoutArray = workouts
+        }
         prepareArray()
+        tableView.reloadData()
     }
     
     func prepareArray() {
