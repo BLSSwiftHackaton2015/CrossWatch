@@ -50,10 +50,24 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func addWorkouts(sender: AnyObject) {
+        createTimeFromTextField(workoutField)
         
-    }
-    
-    func textFieldDidBeginEditing(textField: UITextField) {
+        if let intervals:Int = intervalsField.text.toInt() {
+            
+            var workoutsArray = Array<Workout>()
+        
+            var workout:Workout
+            var rest:Workout
+            
+            for i in 1...intervals {
+                workout = Workout(name: "\(nameField.text) \(i)", time: createTimeFromTextField(workoutField))
+                workoutsArray.append(workout)
+                if !restField.text.isEmpty {
+                    rest = Workout(name: "Rest \(i)", time: createTimeFromTextField(restField))
+                    workoutsArray.append(rest)
+                }
+            }
+        }
         
     }
     
@@ -67,19 +81,69 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+    func textFieldDidEndEditing(textField: UITextField) {
         let timeFieldsArray = [2,3]
         if contains(timeFieldsArray, textField.tag) {
-            if count(textField.text) == 2 && string != "" {
-                textField.text = "\(textField.text):\(string)"
+            let countOfDigits = count(textField.text)
+            if countOfDigits == 0{
+                return
+            }
+            else if countOfDigits == 1 {
+                textField.text = "0\(textField.text):00"
+                return
+            }
+            else if countOfDigits == 2 {
+                textField.text = "\(textField.text):00"
+                return
+            }
+            else if countOfDigits < 5 {
+                let missingZeros = 5 - countOfDigits
+                for i in 1...missingZeros {
+                    textField.text = "\(textField.text)0"
+                }
+            }
+        }
+    }
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        let timeFieldsArray = [2,3]
+        if string != "" {
+            if contains(timeFieldsArray, textField.tag) {
+                if count(textField.text) == 1 {
+                    textField.text = "\(textField.text)\(string):"
+                    return false
+                }
+                if count(textField.text) == 3 && string.toInt() > 5 {
+                    return false
+                }
+                if count(textField.text) == 5 {
+                    return false
+                }
+            }
+            
+            if textField.tag == 4 && count(textField.text) > 1{
                 return false
             }
-            if count(textField.text) == 5 && string != "" {
+            
+            if textField.tag == 1 && count(textField.text) > 11 {
                 return false
             }
         }
         
         return true
+    }
+    
+    func createTimeFromTextField(textField: UITextField) -> NSTimeInterval {
+        
+        let minutesRange = Range(start: textField.text.startIndex, end: advance(textField.text.startIndex, 2))
+        let secondsRange = Range(start: advance(textField.text.startIndex, 3), end: advance(textField.text.startIndex, 5))
+        
+        let minutes = textField.text.substringWithRange(minutesRange)
+        let seconds = textField.text.substringWithRange(secondsRange)
+        
+        let wholeSeconds:Int = (minutes.toInt()! * 60) + seconds.toInt()!
+        
+        return NSTimeInterval(wholeSeconds)
     }
     
     /*
