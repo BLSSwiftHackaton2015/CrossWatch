@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05361AAA1B2C260D00A4EBD0 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05361AA91B2C260D00A4EBD0 /* Workout.swift */; };
+		05361AAB1B2C260D00A4EBD0 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05361AA91B2C260D00A4EBD0 /* Workout.swift */; };
 		A4BDA15C1B2C20DE00F48606 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BDA15B1B2C20DE00F48606 /* AppDelegate.swift */; };
 		A4BDA15F1B2C20DE00F48606 /* CrossWatch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4BDA15D1B2C20DE00F48606 /* CrossWatch.xcdatamodeld */; };
 		A4BDA1611B2C20DE00F48606 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BDA1601B2C20DE00F48606 /* ViewController.swift */; };
@@ -63,6 +65,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		05361AA81B2C260D00A4EBD0 /* CrossWatch WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CrossWatch WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
+		05361AA91B2C260D00A4EBD0 /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		A4BDA1561B2C20DE00F48606 /* CrossWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4BDA15A1B2C20DE00F48606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4BDA15B1B2C20DE00F48606 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +148,8 @@
 				A4BDA1671B2C20DE00F48606 /* LaunchScreen.xib */,
 				A4BDA15D1B2C20DE00F48606 /* CrossWatch.xcdatamodeld */,
 				A4BDA1591B2C20DE00F48606 /* Supporting Files */,
+				05361AA91B2C260D00A4EBD0 /* Workout.swift */,
+				05361AA81B2C260D00A4EBD0 /* CrossWatch WatchKit App-Bridging-Header.h */,
 			);
 			path = CrossWatch;
 			sourceTree = "<group>";
@@ -376,6 +382,7 @@
 				A4BDA1611B2C20DE00F48606 /* ViewController.swift in Sources */,
 				A4BDA15F1B2C20DE00F48606 /* CrossWatch.xcdatamodeld in Sources */,
 				A4BDA15C1B2C20DE00F48606 /* AppDelegate.swift in Sources */,
+				05361AAA1B2C260D00A4EBD0 /* Workout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +401,7 @@
 				A4BDA18A1B2C241500F48606 /* NotificationController.swift in Sources */,
 				A4BDA1881B2C241500F48606 /* InterfaceController.swift in Sources */,
 				A4BDA18C1B2C241500F48606 /* GlanceController.swift in Sources */,
+				05361AAB1B2C260D00A4EBD0 /* Workout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,6 +592,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -591,8 +600,11 @@
 				IBSC_MODULE = CrossWatch_WatchKit_Extension;
 				INFOPLIST_FILE = "CrossWatch WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CrossWatch/CrossWatch WatchKit App-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
 			};
@@ -602,11 +614,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				IBSC_MODULE = CrossWatch_WatchKit_Extension;
 				INFOPLIST_FILE = "CrossWatch WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CrossWatch/CrossWatch WatchKit App-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
 			};
@@ -655,6 +670,7 @@
 				A4BDA17A1B2C20DE00F48606 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A4BDA17B1B2C20DE00F48606 /* Build configuration list for PBXNativeTarget "CrossWatchTests" */ = {
 			isa = XCConfigurationList;
@@ -663,6 +679,7 @@
 				A4BDA17D1B2C20DE00F48606 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A4BDA1A01B2C241500F48606 /* Build configuration list for PBXNativeTarget "CrossWatch WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -671,6 +688,7 @@
 				A4BDA1A21B2C241500F48606 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A4BDA1A31B2C241500F48606 /* Build configuration list for PBXNativeTarget "CrossWatch WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -679,6 +697,7 @@
 				A4BDA1A51B2C241500F48606 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
