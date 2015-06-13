@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -109,6 +110,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?, reply: (([NSObject : AnyObject]!) -> Void)!) {
 
+        
         var name = ""
         var time = ""
         if let workouts = UserDefaults.getWorkouts(){
@@ -126,6 +128,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         if let infoDictionary = userInfo as? [String: String]
         {
+            if (infoDictionary["play"] == "sound") {
+            
+            }
             let responseDictionary = ["name" : name,
                 "time": time]
             reply(responseDictionary)
