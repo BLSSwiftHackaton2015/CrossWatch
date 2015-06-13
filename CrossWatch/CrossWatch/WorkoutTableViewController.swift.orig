@@ -14,12 +14,15 @@ class WorkoutTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
+=======
 
         let addButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: Selector("addWorkout"))
         
         self.navigationItem.setRightBarButtonItem(addButton, animated: false)
 
         var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("checkFirstRow"), userInfo: nil, repeats: true)
+>>>>>>> 62c41c3290a1d987047a2b883b2c77dd073ad8d0
         self.prepareArray()
         self.tableView.reloadData()
         
@@ -83,8 +86,6 @@ class WorkoutTableViewController: UITableViewController {
     func addWorkout(){
         self.performSegueWithIdentifier("addWorkout", sender: nil)
     }
-}
-
 }
 
 
