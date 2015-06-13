@@ -130,11 +130,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let infoDictionary = userInfo as? [String: String]
         {
             if (infoDictionary["play"] == "sound") {
-                var hornSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("horn", ofType: "wav"))
-                var audioPlayer = AVAudioPlayer()
-                audioPlayer = AVAudioPlayer(contentsOfURL: hornSound, error: nil)
-                audioPlayer.prepareToPlay()
-                audioPlayer.play()
+                let soundURL = NSBundle.mainBundle().URLForResource("horn", withExtension: "wav")
+                var mySound: SystemSoundID = 0
+                AudioServicesCreateSystemSoundID(soundURL, &mySound)
+                
+                AudioServicesPlaySystemSound(mySound);
             }
             let responseDictionary = ["name" : name,
                 "time": time]
