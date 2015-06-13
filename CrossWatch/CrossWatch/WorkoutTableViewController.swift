@@ -20,7 +20,6 @@ class WorkoutTableViewController: UITableViewController {
         self.navigationItem.setRightBarButtonItem(addButton, animated: false)
 
         var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("checkFirstRow"), userInfo: nil, repeats: true)
-        self.prepareArray()
         self.tableView.reloadData()
         
     }
@@ -85,6 +84,5 @@ class WorkoutTableViewController: UITableViewController {
     }
 }
 
-}
 
 
