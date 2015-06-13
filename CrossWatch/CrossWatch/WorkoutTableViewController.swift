@@ -20,32 +20,22 @@ class WorkoutTableViewController: UITableViewController {
         self.navigationItem.setRightBarButtonItem(addButton, animated: false)
         self.tableView.reloadData()
         
+        UserDefaults.sendNewWorkoutArray(workoutArray)
+        
     }
     
     override func viewWillAppear(animated: Bool) {
         if let workouts = UserDefaults.getWorkouts() {
             workoutArray = workouts
         }
-        prepareArray()
         tableView.reloadData()
     }
     
-    func prepareArray() {
-        var workout = Workout(name: "a", time: 10)
-        workout.startTimer()
-        var workout2 = Workout(name: "b", time: 5)
-        workoutArray.append(workout)
-        workoutArray.append(workout2)
-        let data = NSKeyedArchiver.archivedDataWithRootObject(workoutArray)
-        NSUserDefaults.standardUserDefaults().setObject(data, forKey: "WorkoutArray")
-    }
-
     func checkFirstRow() {
         if (workoutArray.count > 0) {
             if (workoutArray[0].time == 0) {
                 workoutArray.removeAtIndex(0)
-                let data = NSKeyedArchiver.archivedDataWithRootObject(workoutArray)
-                NSUserDefaults.standardUserDefaults().setObject(data, forKey: "WorkoutArray")
+                UserDefaults.sendNewWorkoutArray(workoutArray)
             }
         }
         if let workout = workoutArray.first {

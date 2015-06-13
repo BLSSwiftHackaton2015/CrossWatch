@@ -119,9 +119,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 var tempWorkouts = workouts
                 tempWorkouts.removeAtIndex(0)
                 
-                UserDefaults
-                let data = NSKeyedArchiver.archivedDataWithRootObject(tempWorkouts)
-                NSUserDefaults.standardUserDefaults().setObject(data, forKey: "WorkoutArray")
+                UserDefaults.sendNewWorkoutArray(tempWorkouts)
             }
         } else {
             NSUserDefaults.standardUserDefaults().setValue([], forKey: "WorkoutArray")
