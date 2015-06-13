@@ -67,6 +67,7 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
                     workoutsArray.append(rest)
                 }
             }
+            UserDefaults.sendWorkouts(workoutsArray)
         }
         
     }
