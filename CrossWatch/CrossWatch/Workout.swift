@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct workout {
-    let name: String
-    let time: NSTimeInterval
+struct Workout {
+    internal let name: String
+    internal let time: NSTimeInterval
+    
 }

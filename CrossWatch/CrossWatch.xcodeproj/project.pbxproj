@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		05361AAA1B2C260D00A4EBD0 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05361AA91B2C260D00A4EBD0 /* Workout.swift */; };
-		05361AAB1B2C260D00A4EBD0 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05361AA91B2C260D00A4EBD0 /* Workout.swift */; };
 		A4BDA15C1B2C20DE00F48606 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BDA15B1B2C20DE00F48606 /* AppDelegate.swift */; };
 		A4BDA15F1B2C20DE00F48606 /* CrossWatch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4BDA15D1B2C20DE00F48606 /* CrossWatch.xcdatamodeld */; };
 		A4BDA1611B2C20DE00F48606 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BDA1601B2C20DE00F48606 /* ViewController.swift */; };
@@ -148,13 +147,13 @@
 				A4BDA15B1B2C20DE00F48606 /* AppDelegate.swift */,
 				A4BDA1601B2C20DE00F48606 /* ViewController.swift */,
 				A4BDA1A71B2C25FE00F48606 /* WorkoutTableViewController.swift */,
+				05361AA91B2C260D00A4EBD0 /* Workout.swift */,
 				A4BDA1621B2C20DE00F48606 /* Main.storyboard */,
 				A4BDA1A91B2C276D00F48606 /* NavigationController.swift */,
 				A4BDA1651B2C20DE00F48606 /* Images.xcassets */,
 				A4BDA1671B2C20DE00F48606 /* LaunchScreen.xib */,
 				A4BDA15D1B2C20DE00F48606 /* CrossWatch.xcdatamodeld */,
 				A4BDA1591B2C20DE00F48606 /* Supporting Files */,
-				05361AA91B2C260D00A4EBD0 /* Workout.swift */,
 				05361AA81B2C260D00A4EBD0 /* CrossWatch WatchKit App-Bridging-Header.h */,
 			);
 			path = CrossWatch;
@@ -409,7 +408,6 @@
 				A4BDA18A1B2C241500F48606 /* NotificationController.swift in Sources */,
 				A4BDA1881B2C241500F48606 /* InterfaceController.swift in Sources */,
 				A4BDA18C1B2C241500F48606 /* GlanceController.swift in Sources */,
-				05361AAB1B2C260D00A4EBD0 /* Workout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
