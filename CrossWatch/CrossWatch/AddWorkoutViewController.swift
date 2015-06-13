@@ -50,26 +50,36 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func addWorkouts(sender: AnyObject) {
-        createTimeFromTextField(workoutField)
-        
-        if let intervals:Int = intervalsField.text.toInt() {
+        if count(workoutField.text) == 5 {
             
-            var workoutsArray = Array<Workout>()
-        
-            var workout:Workout
-            var rest:Workout
-            
-            for i in 1...intervals {
-                workout = Workout(name: "\(nameField.text) \(i)", time: createTimeFromTextField(workoutField))
-                workoutsArray.append(workout)
-                if !restField.text.isEmpty {
-                    rest = Workout(name: "Rest \(i)", time: createTimeFromTextField(restField))
-                    workoutsArray.append(rest)
-                }
+            if let intervals:Int = intervalsField.text.toInt() {
+                saveWorkouts(intervals)
+                
+            } else {
+                saveWorkouts(1)
             }
-            UserDefaults.sendWorkouts(workoutsArray)
+            
+            self.dismissViewControllerAnimated(true, completion: { () -> Void in
+            })
         }
+    }
+    
+    func saveWorkouts(intervals: Int) {
         
+        var workoutsArray = Array<Workout>()
+        
+        var workout:Workout
+        var rest:Workout
+        
+        for i in 1...intervals {
+            workout = Workout(name: "\(nameField.text) \(i)", time: createTimeFromTextField(workoutField))
+            workoutsArray.append(workout)
+            if !restField.text.isEmpty {
+                rest = Workout(name: "Rest \(i)", time: createTimeFromTextField(restField))
+                workoutsArray.append(rest)
+            }
+        }
+        UserDefaults.sendWorkouts(workoutsArray)
     }
     
     func textFieldShouldEndEditing(textField: UITextField) -> Bool {

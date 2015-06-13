@@ -63,8 +63,9 @@ class WorkoutTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("WorkoutCell", forIndexPath: indexPath) as! WorkoutTableViewCell
        
             cell.nameWorkout.text = workoutArray[indexPath.row].name
-            cell.timeWorkout.text = String(stringInterpolationSegment: Int(workoutArray[indexPath.row].time))
-    
+        
+            cell.timeWorkout.text = timeToString(workoutArray[indexPath.row].time)
+        
         return cell
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -75,6 +76,18 @@ class WorkoutTableViewController: UITableViewController {
 
     func addWorkout(){
         self.performSegueWithIdentifier("addWorkout", sender: nil)
+    }
+    
+    func timeToString(time: NSTimeInterval) -> String {
+        
+        var ti = Int(time)
+        var seconds = ti % 60
+        var minutes = (ti / 60) % 60
+        
+        if seconds == 0 {
+            return "\(minutes):00"
+        }
+        return "\(minutes):\(seconds)"
     }
 }
 
