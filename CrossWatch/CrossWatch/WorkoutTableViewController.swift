@@ -26,6 +26,7 @@ class WorkoutTableViewController: UITableViewController {
         } else {
             NSUserDefaults.standardUserDefaults().setValue([], forKey: "WorkoutArray")
         }
+        prepareArray()
     }
     
     func prepareArray() {
@@ -36,7 +37,13 @@ class WorkoutTableViewController: UITableViewController {
     }
 
     func checkFirstRow() {
+        if (workoutArray.count > 0) {
+            if (workoutArray[0].time == 0) {
+                workoutArray.removeAtIndex(0)
+            }
+        }
         self.tableView.reloadData()
+
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
