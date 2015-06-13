@@ -14,5 +14,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
 
+    @IBAction func goToWorkout(sender: AnyObject) {
+        self.performSegueWithIdentifier("GoToWorkouts", sender: nil)
+    }
 }
 
