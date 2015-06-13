@@ -31,6 +31,11 @@ class UserDefaults: NSObject {
         }
     }
     
+    static func sendNewWorkoutArray(workoutsArray: Array<Workout>) {
+        let data = NSKeyedArchiver.archivedDataWithRootObject(workoutsArray)
+        NSUserDefaults.standardUserDefaults().setObject(data, forKey: "WorkoutArray")
+    }
+    
     static func getWorkouts() -> Array<Workout>? {
         let data = NSUserDefaults.standardUserDefaults().valueForKey("WorkoutArray") as! NSData
         var workoutsArray = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? [Workout]
