@@ -10,17 +10,33 @@ import UIKit
 
 class WorkoutTableViewController: UITableViewController {
 
-    var workoutArray: NSArray?
+    var workoutArray: [Workout] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupWorkout()
-        
         var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("checkFirstRow"), userInfo: nil, repeats: true)
+        self.prepareArray()
+        self.tableView.reloadData()
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        if let workouts: [Workout] = NSUserDefaults.standardUserDefaults().valueForKey("WorkoutArray") as?[Workout] {
+            self.workoutArray = workouts
+        } else {
+            NSUserDefaults.standardUserDefaults().setValue([], forKey: "WorkoutArray")
+        }
+    }
+    
+    func prepareArray() {
+        var workout = Workout(name: "a", time: 10)
+        workout.startTimer()
+        workoutArray.append(workout)
+        
     }
 
-    func setupWorkout() {
-
+    func checkFirstRow() {
+        self.tableView.reloadData()
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -28,25 +44,20 @@ class WorkoutTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let count = workoutArray?.count {
-            return count
-        } else {
-            return 0
-        }
+        return self.workoutArray.count
     }
-    func checkFirstRow() {
-    }
+
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
         let cell = tableView.dequeueReusableCellWithIdentifier("WorkoutCell", forIndexPath: indexPath) as! WorkoutTableViewCell
        
-        if let work: Workout = workoutArray?.objectAtIndex(indexPath.row) as? Workout {
-            cell.nameWorkout.text = work.name
-            cell.timeWorkout.text = String(stringInterpolationSegment: work.time)
-        }
+            cell.nameWorkout.text = workoutArray[indexPath.row].name
+            cell.timeWorkout.text = String(stringInterpolationSegment: workoutArray[indexPath.row].time)
     
         return cell
     }
 
 }
+
+
