@@ -28,9 +28,14 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
         restField.delegate = self
         intervalsField.delegate = self
         
-        workoutField.keyboardType = UIKeyboardType.NumbersAndPunctuation
-        restField.keyboardType = UIKeyboardType.DecimalPad
-        intervalsField.keyboardType = UIKeyboardType.DecimalPad
+        nameField.tag = 1
+        workoutField.tag = 2
+        restField.tag = 3
+        intervalsField.tag = 4
+        
+        workoutField.keyboardType = UIKeyboardType.NumberPad
+        restField.keyboardType = UIKeyboardType.NumberPad
+        intervalsField.keyboardType = UIKeyboardType.NumberPad
         
     }
 
@@ -58,6 +63,21 @@ class AddWorkoutViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        
+        return true
+    }
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        let timeFieldsArray = [2,3]
+        if contains(timeFieldsArray, textField.tag) {
+            if count(textField.text) == 2 && string != "" {
+                textField.text = "\(textField.text):\(string)"
+                return false
+            }
+            if count(textField.text) == 5 && string != "" {
+                return false
+            }
+        }
         
         return true
     }
